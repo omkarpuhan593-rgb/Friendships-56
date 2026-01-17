@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff8dc;
+  scroll-behavior: smooth;
+}
+
+.scene {
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scene-hero {
+  background: linear-gradient(#ffe066, #fff);
+}
+
+.runner {
+  font-size: 60px;
+  animation: run 3s infinite linear;
+}
+
+@keyframes run {
+  from { transform: translateX(-120px); }
+  to { transform: translateX(120px); }
+}
+
+.letter {
+  margin-top: 40px;
+  font-size: 22px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.hidden {
+  display: none;
+}
+
+.paper {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+  animation: open 1s ease;
+}
+
+@keyframes open {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+.scroll-hint {
+  margin-top: 30px;
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.doremon, .shinchan, .jerry {
+  font-size: 70px;
+  animation: float 2s infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+footer {
+  padding: 20px;
+  background: #ffeb99;
+  text-align: center;
+  font-size: 14px;
+  }
